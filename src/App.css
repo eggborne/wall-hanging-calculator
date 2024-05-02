@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0;
+  text-align: center;
+}
+
+main {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: blue;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 1.65em;
+}
