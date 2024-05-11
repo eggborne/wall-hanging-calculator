@@ -10,10 +10,10 @@ main {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  background-color: blue;
   padding: 1rem;
 }
 
 h1 {
   font-size: 1.65em;
+  margin-bottom: 1rem;
 }
