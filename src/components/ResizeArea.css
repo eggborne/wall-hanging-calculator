@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  --frame-shadow-color: #00000099;
+  --frame-shadow-color: #00000033;
 }
 
 input {
@@ -58,21 +58,35 @@ input {
   grid-column-end: 3;
   display: flex;
   flex-direction: column;
-  background: #ff000033;
   gap: 1rem;
   width: 100%;
 }
 
 .image-preview {
   position: relative;
-  outline: 1px solid rgba(255, 255, 255, 0.666);
+  background: #c6a67c;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 0 inset #00000044;
-  border-style: solid;
-  box-shadow: 0.5rem 0.5rem 0rem var(--frame-shadow-color);
+  box-shadow: 0rem 0rem 1rem var(--frame-shadow-color);
   transition: all 100ms ease;
+}
+
+.image-preview > * {
+  transition: all 100ms ease;
+}
+
+.image-preview > .inner-edge {
+  position: relative;
+  background-color: #00000012;
+  width: 100%;
+  height: 100%;
+  border: inset #00000055;
+}
+
+.dimensions-label {
+  position: absolute;
+
 }
 
 .upload-button-area {
@@ -83,8 +97,8 @@ input {
 
 .d-ring {
   position: absolute;
-  aspect-ratio: 0.25;
-  background-color: #aaffaa99;
+  aspect-ratio: 0.35;
+  background-color: #6ff891;
   top: 0;
 }
 
@@ -96,4 +110,23 @@ input {
 .d-ring.right {
   transform-origin: top right;
   right: 0rem;
+}
+
+.dimension-tag {
+  position: absolute;
+  z-index: 12;
+  font-size: 1rem;
+  color: #00000077;
+}
+
+.dimension-tag.total-width {
+  top: 0.1rem;
+  left: 50%;
+  translate: -50% 0;
+}
+.dimension-tag.total-height {
+  top: 50%;
+  left: 0.75rem;
+  translate: -50% -50%;
+  rotate:-90deg;
 }

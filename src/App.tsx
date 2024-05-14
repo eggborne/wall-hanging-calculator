@@ -4,13 +4,17 @@ import ResizeArea from './components/ResizeArea'
 function App() {
 
   return (
-    <main>
-      <h1>I typed Guacamole</h1>
-      <ResizeArea />
-      <div>
-        This is another paragraph
-      </div>
-    </main>
+    <>
+      <header>
+        <h1>Wall Hanging Calculator</h1>
+      </header>
+      <main>
+        <ResizeArea />
+      </main>
+      <footer>
+        footer
+      </footer>
+    </>
   )
 }
 

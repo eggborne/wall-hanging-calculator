@@ -28,7 +28,19 @@ const calculateDRingPlacement = (width: number, height: number) => {
   placement = Math.min(Math.max(placement, height / 4), height / 3);
 
   // Round the placement to the nearest half inch
-  return Math.round(placement * 2) / 2;
+  placement = Math.round(placement * 2) / 2;
+  const adjustment = (height / 3) - placement;
+  const adjRatio = adjustment / placement;
+  console.warn('ADJUSTED DEFAULT RING DISTANCE BY RATIO', adjRatio);
+  
+  // return {
+  //   placement: Math.round((height / 3) * 2) / 2,
+  //   adjustment: 0,
+  // }
+  return {
+    placement,
+    adjustment,
+  }
 }
 
 export {
